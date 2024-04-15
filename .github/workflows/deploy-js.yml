@@ -74,8 +74,8 @@ jobs:
           bucket-region: us-east-1
           dist-folder: ./dist
       - name: Output information 
-      run: |
-        echo "Live URL: $ {{ steps.deploy-website.outputs.website-url }}"
+        run: |
+          echo "Live URL: $ {{ steps.deploy-website.outputs.website-url }}"
   # information:
   #   runs-on: ubuntu-latest
   #   steps:
