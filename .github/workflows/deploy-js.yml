@@ -69,10 +69,9 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         with:
-          bucket: test.s3.bucket.test
+          bucket: test-s3-bucket-test
           bucket-region: us-east-1
           dist-folder: ./dist
-
   # information:
   #   runs-on: ubuntu-latest
   #   steps:
