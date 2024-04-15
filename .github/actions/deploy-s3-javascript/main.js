@@ -10,11 +10,14 @@ function run() {
     const distFolder = core.getInput('dist-folder', { requred: true });
 
     // 2) Upload my files.
-    const s3Url = `s3://${bucket}`
-    exec.exec(`aws s3 sync ${distFolder} ${s3Url} --region ${bucketRegion} `)
+    const s3Url = `s3://${bucket}`;
+    exec.exec(`aws s3 sync ${distFolder} ${s3Url} --region ${bucketRegion} `);
+    
+    const websiteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com`;
+// output website address
+    core.setOutput('website-url', websiteUrl); 
 
-
-    core.notice('Hellow World!')
+    core.notice('Hellow World!');
 }
 
 run();
